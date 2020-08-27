@@ -1,0 +1,41 @@
+.main_logo img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form-control{
+    width: 82%;
+}
+.center {
+    padding-left: 18%;
+    padding-right: 16%;
+    padding-top: 3%;
+    margin: auto;
+    width: auto;
+    /* padding: 10px; */
+}
+.col-sm-10{
+    line-height: 2.5;
+}
+.form-check-label .form-check-input {
+    position: absolute;
+    margin-top: 0.9rem;
+    margin-left: -1.25rem;
+}
+.special-color-dark {
+    background-color: #4B0082 !important;
+}
+ul{
+    list-style-type:none;
+    color: #FFF;
+}
+.footer_data{
+    padding: 2%;
+}
+footer{
+    margin-right: 0px;
+}
+.footer-copyright{
+    background-color: #000000;
+    color: #D3D3D3;
+}

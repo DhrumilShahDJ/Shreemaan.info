@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'index.css' %}"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+{% endblock %}
+{% block content %}
+<br>
+<div class="main_logo">
+    <img src="{% static 'logo.png' %}">
+</div>
+<br>
+<div class="text-center">
+    <h2 style="font-style: italic; text-shadow: 2px 2px #FF0000;"><b>आपका निजी सहायक मिस्टर श्रीमान</b></h2><br>
+      <h3><b>यहां रजिस्टर करें..!</b></h3>
+</div>
+<div class="center">
+    <form>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">नाम :</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="name">
+    </div>
+    </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">आयु :</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="age">
+    </div>
+    </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">लिंग :</label>
+    <div class="col-sm-10">
+        <div class="form-check-inline">
+          <label class="form-check-label" for="radio1">
+            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1">पुरुष
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <label class="form-check-label" for="radio2">
+            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">स्त्री
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input">अन्य
+          </label>
+        </div>
+    </div>
+    </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">व्हाट्सएप नंबर :</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="whno">
+    </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">विवाहित ? :</label>
+        <div class="col-sm-10">
+            <div class="form-check-inline">
+              <label class="form-check-label" for="radio1">
+                <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option1">हाँ
+              </label>
+            </div>
+            <div class="form-check-inline">
+              <label class="form-check-label" for="radio2">
+                <input type="radio" class="form-check-input" id="radio5" name="optradio" value="option2">नहीं
+              </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">आपका फोटो :</label>
+    <div class="col-sm-10">
+        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    </div>
+    </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">राज्य :</label>
+    <div class="col-sm-10 ">
+        <select class="custom-select custom-select-sm">
+            <option selected>Open this select menu</option>
+            <option value="1">आंध्र प्रदेश</option>
+            <option value="2">अरुणाचल प्रदेश</option>
+            <option value="3">असम</option>
+            <option value="4">बिहार</option>
+            <option value="5">छत्तीसगढ़</option>
+            <option value="6">गोवा</option>
+            <option value="7">गुजरात</option>
+            <option value="8">हरियाणा</option>
+            <option value="9">हिमाचल प्रदेश</option>
+            <option value="10">जम्मू और कश्मीर</option>
+            <option value="11">झारखंड</option>
+            <option value="12">कर्नाटक</option>
+            <option value="13">केरल</option>
+            <option value="14">मध्य प्रदेश</option>
+            <option value="15">महाराष्ट्र</option>
+            <option value="16">मणिपुर</option>
+            <option value="17">मेघालय</option>
+            <option value="18">मिजोरम</option>
+            <option value="19">नागालैंड</option>
+            <option value="20">ओडिशा</option>
+            <option value="21">पंजाब</option>
+            <option value="22">राजस्थान</option>
+            <option value="23">सिक्किम</option>
+            <option value="24">तमिलनाडु</option>
+            <option value="25">तेलंगाना</option>
+            <option value="26">त्रिपुरा</option>
+            <option value="27">उत्तर प्रदेश</option>
+            <option value="28">उत्तराखंड</option>
+            <option value="29">पश्चिम बंगाल</option>
+
+        </select>
+    </div>
+    </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">शहर / गांव :</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="city">
+    </div>
+    </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">समस्याओं का चयन करें :</label>
+    <div class="col-sm-10">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" id="check1" name="chb1" value="option1">स्व रोजगार (स्वरोजगार / स्वयं का रोजगार)
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" id="check2" name="chb2" value="option2">प्रेरक समर्थन (प्रेरक समर्थन)
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" id="check3" name="chb3" value="option3">प्रेम संबंध
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" id="check4" name="chb4" value="option4">कैरियर परामर्श (कैरियर परामर्श)
+          </label>
+        </div>
+    </div>
+    </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">समस्या के बारे में लिखें :</label>
+    <div class="col-sm-10">
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">स्क्रीनशॉट अपलोड करें :</label>
+    <div class="col-sm-10">
+        <label for="exampleFormControlFile1">"Mr." का मान रखने के लिए, आप Google पे / PhonePe / PayTM पर 94124545395 नंबर पर अपनी इच्छानुसार कुछ भी कर सकते हैं.</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile2">
+    </div>
+    </div>
+    <center>
+    <div>
+        <button type="submit " class="btn btn-primary">रजिस्टर करें</button>
+    </div>
+    </center>
+    </form>
+</div>
+<br>
+<br>
+<br>
+<!-- Footer -->
+<footer class="page-footer font-small special-color-dark pt-4">
+    <div class="row footer_data" style="padding: 1%; margin-right: 0px;margin-left: 0px;">
+        <div class="col-md-4 text-center mt-3">
+            <ul>
+                <li><img src="{% static 'siteseal_gd_3_h_l_m.gif' %}" alt="SSL site seal - click to verify"></li>
+                <br>
+                <li></li>
+            </ul>
+        </div>
+        <div class="col-md-4 text-center mt-3">
+            <ul>
+                <li><img src="{% static 'Make_In_India.png' %}" alt="mak"></li>
+                <br>
+                <li></li>
+            </ul>
+        </div>
+        <div class="col-md-4 text-center mt-3">
+            <ul>
+                <li><img src="{% static 'google_play.png' %}" alt="App_link"></li>
+                <br>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-copyright text-center py-3" style="width: 100%;">© 2020 Copyright:
+        <a href="https://mdbootstrap.com/"> Shreeman.com</a>
+    </div>
+</footer>
+<!-- Footer -->
+{% endblock %}

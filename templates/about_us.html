@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'about_us.css' %}"/>
+{% endblock %}
+{% block content %}
+<div class="main_body">
+    <div class="title">
+        <center><h1>अक्सर पूछे जाने वाले प्रश्न</h1></center>
+    </div>
+    <div class="about_body">
+        <button class="collapsible">कौन हैं श्रीमान?</button>
+        <div class="content">
+          <p>श्रीमान आपके पर्सनल काउंसलर हैं, जो आपको आपकी समस्या / उलझन के लिए सुझाव देते हैं। श्रीमान आपको टेक्नोलॉजी एवं खुले विचारो द्वारा आपके द्वारा बताई गई जानकारी, पारिवारिक स्थिति, आर्थिक स्थिति, परिस्थिति इत्यादि के आधार पर सुझाव देते हैं।</p>
+        </div>
+        <p>                                   </p>
+        <button class="collapsible">श्रीमान मेरी किन समस्याओ के लिए सुझाव दे सकते हैं?</button>
+        <div class="content">
+          <p>श्रीमान आपको निम्नलिखित समस्याओ के लिए सुझाव दे सकते हैं –
+            <ul style="color:black;">
+                <li>Self – Employment (स्व – रोजगार / खुद का काम)</li>
+                <li>Love Affair (प्रेम सम्बन्ध)</li>
+                <li>Motivational Support (प्रेरक विचार)</li>
+                <li>Career Counseling (करियर परामर्श)</li>
+            </ul>
+          </p>
+        </div>
+        <p>                                   </p>
+        <button class="collapsible">श्रीमान का शुल्क (फीस) क्या है?</button>
+        <div class="content">
+          <p>आप अपनी इच्छा और सामर्थ के अनुसार फीस दे सकते हैं।</p>
+        </div>
+        <p>                                   </p>
+        <button class="collapsible">क्या श्रीमान की कोई अतिरिक्त फीस भी है?</button>
+        <div class="content">
+          <p>नहीं। श्रीमान का कोई छिपा हुआ खर्च या अतिरिक्त फीस नहीं है।</p>
+        </div>
+        <p>                                   </p>
+        <button class="collapsible">श्रीमान कैसे संपर्क करेंगे?</button>
+        <div class="content">
+          <p>आपके रजिस्ट्रेशन करने के बाद श्रीमान आपको व्हाट्सप्प मैसेज या फ़ोन कॉल के द्वारा आपसे संपर्क करेंगे। हालांकि आपको संपर्क करने में कुछ घंटो का समय लग सकता है।</p>
+        </div>
+        <p>                                   </p>
+        <button class="collapsible">अगर मुझे कोई प्रश्न बाद में पूछने की इच्छा हो तो क्या पूछ सकते हैं?</button>
+        <div class="content">
+          <p>बिलकुल। आप अपने प्रश्न / उलझन श्रीमान को व्हाट्सप्प पर मैसेज कर सकते हैं। जिसके लिए श्रीमान आपको कुछ ही समय में सुझाव देने का प्रयास करेंगे।</p>
+        </div>
+        <p>                                   </p>
+        <button class="collapsible">क्या मेरी सभी जानकारी को गोपनीय रखा जाएगा?</button>
+        <div class="content">
+          <p>हाँ। बिलकुल! आपकी सभी जानकारी को पूर्णत: गोपनीय रखा जायेगा।</p>
+        </div>
+        <p>                                   </p>
+    </div>
+</div>
+<br>
+<footer class="page-footer font-small special-color-dark pt-4">
+    <div class="row footer_data" style="padding: 1%; margin-right: 0px;margin-left: 0px;">
+        <div class="col-md-4 text-center mt-3">
+            <ul>
+                <li><img src="{% static 'siteseal_gd_3_h_l_m.gif' %}" alt="SSL site seal - click to verify"></li>
+                <br>
+                <li></li>
+            </ul>
+        </div>
+        <div class="col-md-4 text-center mt-3">
+            <ul>
+                <li><img src="{% static 'Make_In_India.png' %}" alt="mak"></li>
+                <br>
+                <li></li>
+            </ul>
+        </div>
+        <div class="col-md-4 text-center mt-3">
+            <ul>
+                <li><img src="{% static 'google_play.png' %}" alt="App_link"></li>
+                <br>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-copyright text-center py-3" style="width: 100%;">© 2020 Copyright:
+        <a href="https://mdbootstrap.com/"> Shreeman.com</a>
+    </div>
+</footer>
+{% endblock %}
+{% block custom_js %}
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+{% endblock %}

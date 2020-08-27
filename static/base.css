@@ -1,0 +1,10 @@
+body{
+    background-color: cyan;
+}
+nav .bg-dark {
+    background-color: #4B0082! important;
+}
+.navbar-brand b{
+    font-size: 181%;
+    font-style: italic;
+}
